@@ -164,6 +164,9 @@ async function handler(event, context) {
     } else {
       viewport = [1200, 630];
     }
+  } else if(size === "showcase") {
+    dpr = 2;
+    viewport = [640 * dpr, 320 * dpr];
   }
 
   url = decodeURIComponent(url);
