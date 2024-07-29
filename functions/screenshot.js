@@ -194,6 +194,7 @@ async function handler(event, context) {
     return {
       statusCode: 200,
       headers: {
+        "Netlify-CDN-Cache-Control": "public, max-age=86400, stale-while-revalidate=604800",
         "content-type": `image/${format}`
       },
       body: output,
